@@ -16,6 +16,9 @@ Although it can be used in the same way in Objective-C, I had clearly Swift proj
 
 ## Usage
 
+Important for a proper usage: ByteBackpacker does only supprt value types (e.g. numbers, structs, ...), but no reference types (e.g. classes)! For furhter information see Discussion.
+
+
 ### Examples
 
 #### From `Double` to `[Byte]` and from `[Byte]` to `Double`
@@ -60,8 +63,14 @@ if you want to use type inference, or otherwise
 ```public class func unpack<T>(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T```
 
 
-### Contributions
+## Discussion
 
-Feel free to use this code, but you can help me: 
-* Some test functions exists, but they are not complete. 
-* I would love to improve this project. Tell me your ideas, here in github, via mail or in [codereview.stackexchange.com](http://codereview.stackexchange.com/questions/114730/type-to-byte-array-conversion-in-swift).
+Unfortunately, there is no suitable option for specifying value types in Swift's generics. See [here the discussion on stackoverflow](http://stackoverflow.com/q/28782532/1864294). It would be awesome to specify our methods like ´func (un)pack<T: Any where T: ~AnyClass>(...)´, but until today Swift does not provide us this opportunities. We will see what the future brings us.
+
+I would love to improve this project. Tell me your ideas, here in github, via mail or in [codereview.stackexchange.com](http://codereview.stackexchange.com/questions/114730/type-to-byte-array-conversion-in-swift).
+
+
+## Contributions
+
+- [ ] Add more test cases 
+
