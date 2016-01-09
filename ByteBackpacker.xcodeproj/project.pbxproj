@@ -12,6 +12,9 @@
 		5F8561E11C415CA700316A22 /* ByteBackpackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */; };
 		5F8561EC1C415CC300316A22 /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */; };
 		5F8561FF1C415D2500316A22 /* ByteBackpacker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8561F51C415D2400316A22 /* ByteBackpacker.framework */; };
+		5F8562151C41670E00316A22 /* ByteBackpackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */; };
+		5F8562161C41677300316A22 /* ByteBackpacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8561D41C415CA700316A22 /* ByteBackpacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F8562171C41685300316A22 /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +134,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8562161C41677300316A22 /* ByteBackpacker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8562171C41685300316A22 /* ByteBackpacker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8562151C41670E00316A22 /* ByteBackpackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
