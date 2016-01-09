@@ -1,6 +1,5 @@
 <img src="/icon.png" width="200" align="right">
-[![Build Status](https://travis-ci.org/michaeldorner/ByteBackpacker.svg)](https://travis-ci.org/michaeldorner/ByteBackpacker) [![codecov.io](https://codecov.io/github/michaeldorner/ByteBackpacker/coverage.svg?branch=master)](https://codecov.io/github/michaeldorner/ByteBackpacker?branch=master)
-
+[![Build Status](https://travis-ci.org/michaeldorner/ByteBackpacker.svg)](https://travis-ci.org/michaeldorner/ByteBackpacker) 
 
 # ByteBackpacker
 
