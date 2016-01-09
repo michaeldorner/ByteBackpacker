@@ -2,11 +2,11 @@
 //  ByteBackpacker.h
 //  ByteBackpacker
 //
-//  Created by Michael Dorner on 22.12.15.
-//  Copyright © 2015 Michael Dorner. All rights reserved.
+//  Created by Michael Dorner on 09.01.16.
+//  Copyright © 2016 Michael Dorner. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for ByteBackpacker.
 FOUNDATION_EXPORT double ByteBackpackerVersionNumber;

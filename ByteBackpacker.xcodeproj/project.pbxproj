@@ -7,84 +7,137 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A316F9D41C297C2400A3753E /* ByteBackpacker.h in Headers */ = {isa = PBXBuildFile; fileRef = A316F9D31C297C2400A3753E /* ByteBackpacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A316F9DB1C297C2500A3753E /* ByteBackpacker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A316F9D01C297C2400A3753E /* ByteBackpacker.framework */; };
-		A316F9E01C297C2500A3753E /* ByteBackpackerByteBackpackerDoubleTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316F9DF1C297C2500A3753E /* ByteBackpackerByteBackpackerDoubleTestsTests.swift */; };
-		A316F9EB1C297C3200A3753E /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316F9EA1C297C3200A3753E /* ByteBackpacker.swift */; };
+		5F8561D51C415CA700316A22 /* ByteBackpacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8561D41C415CA700316A22 /* ByteBackpacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F8561DC1C415CA700316A22 /* ByteBackpacker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8561D11C415CA700316A22 /* ByteBackpacker.framework */; };
+		5F8561E11C415CA700316A22 /* ByteBackpackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */; };
+		5F8561EC1C415CC300316A22 /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */; };
+		5F8561F81C415D2400316A22 /* ByteBackpacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8561F71C415D2400316A22 /* ByteBackpacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F8561FF1C415D2500316A22 /* ByteBackpacker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8561F51C415D2400316A22 /* ByteBackpacker.framework */; };
+		5F8562041C415D2500316A22 /* ByteBackpackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8562031C415D2500316A22 /* ByteBackpackerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A316F9DC1C297C2500A3753E /* PBXContainerItemProxy */ = {
+		5F8561DD1C415CA700316A22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A316F9C71C297C2400A3753E /* Project object */;
+			containerPortal = 5F8561C81C415CA700316A22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A316F9CF1C297C2400A3753E;
+			remoteGlobalIDString = 5F8561D01C415CA700316A22;
+			remoteInfo = ByteBackpacker;
+		};
+		5F8562001C415D2500316A22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F8561C81C415CA700316A22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8561F41C415D2400316A22;
 			remoteInfo = ByteBackpacker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A316F9D01C297C2400A3753E /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A316F9D31C297C2400A3753E /* ByteBackpacker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteBackpacker.h; sourceTree = "<group>"; };
-		A316F9D51C297C2400A3753E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A316F9DA1C297C2500A3753E /* ByteBackpackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ByteBackpackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A316F9DF1C297C2500A3753E /* ByteBackpackerByteBackpackerDoubleTestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteBackpackerByteBackpackerDoubleTestsTests.swift; sourceTree = "<group>"; };
-		A316F9E11C297C2500A3753E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A316F9EA1C297C3200A3753E /* ByteBackpacker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteBackpacker.swift; sourceTree = "<group>"; };
+		5F8561D11C415CA700316A22 /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8561D41C415CA700316A22 /* ByteBackpacker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteBackpacker.h; sourceTree = "<group>"; };
+		5F8561D61C415CA700316A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8561DB1C415CA700316A22 /* ByteBackpacker iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ByteBackpacker iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteBackpackerTests.swift; sourceTree = "<group>"; };
+		5F8561E21C415CA700316A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteBackpacker.swift; sourceTree = "<group>"; };
+		5F8561F51C415D2400316A22 /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8561F71C415D2400316A22 /* ByteBackpacker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteBackpacker.h; sourceTree = "<group>"; };
+		5F8561F91C415D2400316A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8561FE1C415D2500316A22 /* ByteBackpacker OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ByteBackpacker OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8562031C415D2500316A22 /* ByteBackpackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteBackpackerTests.swift; sourceTree = "<group>"; };
+		5F8562051C415D2500316A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A316F9CC1C297C2400A3753E /* Frameworks */ = {
+		5F8561CD1C415CA700316A22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A316F9D71C297C2500A3753E /* Frameworks */ = {
+		5F8561D81C415CA700316A22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A316F9DB1C297C2500A3753E /* ByteBackpacker.framework in Frameworks */,
+				5F8561DC1C415CA700316A22 /* ByteBackpacker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8561F11C415D2400316A22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8561FB1C415D2500316A22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F8561FF1C415D2500316A22 /* ByteBackpacker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A316F9C61C297C2400A3753E = {
+		5F8561C71C415CA700316A22 = {
 			isa = PBXGroup;
 			children = (
-				A316F9D21C297C2400A3753E /* ByteBackpacker */,
-				A316F9DE1C297C2500A3753E /* ByteBackpackerTests */,
-				A316F9D11C297C2400A3753E /* Products */,
+				5F8561D31C415CA700316A22 /* ByteBackpacker */,
+				5F8561DF1C415CA700316A22 /* ByteBackpackerTests */,
+				5F8561F61C415D2400316A22 /* ByteBackpacker */,
+				5F8562021C415D2500316A22 /* ByteBackpackerTests */,
+				5F8561D21C415CA700316A22 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A316F9D11C297C2400A3753E /* Products */ = {
+		5F8561D21C415CA700316A22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A316F9D01C297C2400A3753E /* ByteBackpacker.framework */,
-				A316F9DA1C297C2500A3753E /* ByteBackpackerTests.xctest */,
+				5F8561D11C415CA700316A22 /* ByteBackpacker.framework */,
+				5F8561DB1C415CA700316A22 /* ByteBackpacker iOS Tests.xctest */,
+				5F8561F51C415D2400316A22 /* ByteBackpacker.framework */,
+				5F8561FE1C415D2500316A22 /* ByteBackpacker OS X Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A316F9D21C297C2400A3753E /* ByteBackpacker */ = {
+		5F8561D31C415CA700316A22 /* ByteBackpacker */ = {
 			isa = PBXGroup;
 			children = (
-				A316F9EA1C297C3200A3753E /* ByteBackpacker.swift */,
-				A316F9D31C297C2400A3753E /* ByteBackpacker.h */,
-				A316F9D51C297C2400A3753E /* Info.plist */,
+				5F8561D41C415CA700316A22 /* ByteBackpacker.h */,
+				5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */,
+				5F8561D61C415CA700316A22 /* Info.plist */,
 			);
 			path = ByteBackpacker;
 			sourceTree = "<group>";
 		};
-		A316F9DE1C297C2500A3753E /* ByteBackpackerTests */ = {
+		5F8561DF1C415CA700316A22 /* ByteBackpackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				A316F9DF1C297C2500A3753E /* ByteBackpackerByteBackpackerDoubleTestsTests.swift */,
-				A316F9E11C297C2500A3753E /* Info.plist */,
+				5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */,
+				5F8561E21C415CA700316A22 /* Info.plist */,
+			);
+			path = ByteBackpackerTests;
+			sourceTree = "<group>";
+		};
+		5F8561F61C415D2400316A22 /* ByteBackpacker */ = {
+			isa = PBXGroup;
+			children = (
+				5F8561F71C415D2400316A22 /* ByteBackpacker.h */,
+				5F8561F91C415D2400316A22 /* Info.plist */,
+			);
+			path = ByteBackpacker;
+			sourceTree = "<group>";
+		};
+		5F8562021C415D2500316A22 /* ByteBackpackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F8562031C415D2500316A22 /* ByteBackpackerTests.swift */,
+				5F8562051C415D2500316A22 /* Info.plist */,
 			);
 			path = ByteBackpackerTests;
 			sourceTree = "<group>";
@@ -92,98 +145,164 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A316F9CD1C297C2400A3753E /* Headers */ = {
+		5F8561CE1C415CA700316A22 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A316F9D41C297C2400A3753E /* ByteBackpacker.h in Headers */,
+				5F8561D51C415CA700316A22 /* ByteBackpacker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8561F21C415D2400316A22 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F8561F81C415D2400316A22 /* ByteBackpacker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A316F9CF1C297C2400A3753E /* ByteBackpacker */ = {
+		5F8561D01C415CA700316A22 /* ByteBackpacker iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A316F9E41C297C2500A3753E /* Build configuration list for PBXNativeTarget "ByteBackpacker" */;
+			buildConfigurationList = 5F8561E51C415CA700316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker iOS" */;
 			buildPhases = (
-				A316F9CB1C297C2400A3753E /* Sources */,
-				A316F9CC1C297C2400A3753E /* Frameworks */,
-				A316F9CD1C297C2400A3753E /* Headers */,
-				A316F9CE1C297C2400A3753E /* Resources */,
+				5F8561CC1C415CA700316A22 /* Sources */,
+				5F8561CD1C415CA700316A22 /* Frameworks */,
+				5F8561CE1C415CA700316A22 /* Headers */,
+				5F8561CF1C415CA700316A22 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ByteBackpacker;
+			name = "ByteBackpacker iOS";
 			productName = ByteBackpacker;
-			productReference = A316F9D01C297C2400A3753E /* ByteBackpacker.framework */;
+			productReference = 5F8561D11C415CA700316A22 /* ByteBackpacker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A316F9D91C297C2500A3753E /* ByteBackpackerTests */ = {
+		5F8561DA1C415CA700316A22 /* ByteBackpacker iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A316F9E71C297C2500A3753E /* Build configuration list for PBXNativeTarget "ByteBackpackerTests" */;
+			buildConfigurationList = 5F8561E81C415CA700316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker iOS Tests" */;
 			buildPhases = (
-				A316F9D61C297C2500A3753E /* Sources */,
-				A316F9D71C297C2500A3753E /* Frameworks */,
-				A316F9D81C297C2500A3753E /* Resources */,
+				5F8561D71C415CA700316A22 /* Sources */,
+				5F8561D81C415CA700316A22 /* Frameworks */,
+				5F8561D91C415CA700316A22 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A316F9DD1C297C2500A3753E /* PBXTargetDependency */,
+				5F8561DE1C415CA700316A22 /* PBXTargetDependency */,
 			);
-			name = ByteBackpackerTests;
+			name = "ByteBackpacker iOS Tests";
 			productName = ByteBackpackerTests;
-			productReference = A316F9DA1C297C2500A3753E /* ByteBackpackerTests.xctest */;
+			productReference = 5F8561DB1C415CA700316A22 /* ByteBackpacker iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F8561F41C415D2400316A22 /* ByteBackpacker OS X */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F8562061C415D2500316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker OS X" */;
+			buildPhases = (
+				5F8561F01C415D2400316A22 /* Sources */,
+				5F8561F11C415D2400316A22 /* Frameworks */,
+				5F8561F21C415D2400316A22 /* Headers */,
+				5F8561F31C415D2400316A22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ByteBackpacker OS X";
+			productName = ByteBackpacker;
+			productReference = 5F8561F51C415D2400316A22 /* ByteBackpacker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5F8561FD1C415D2500316A22 /* ByteBackpacker OS X Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F8562091C415D2500316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker OS X Tests" */;
+			buildPhases = (
+				5F8561FA1C415D2500316A22 /* Sources */,
+				5F8561FB1C415D2500316A22 /* Frameworks */,
+				5F8561FC1C415D2500316A22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F8562011C415D2500316A22 /* PBXTargetDependency */,
+			);
+			name = "ByteBackpacker OS X Tests";
+			productName = ByteBackpackerTests;
+			productReference = 5F8561FE1C415D2500316A22 /* ByteBackpacker OS X Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A316F9C71C297C2400A3753E /* Project object */ = {
+		5F8561C81C415CA700316A22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Sivantos Pte. Ltd.";
+				ORGANIZATIONNAME = "Michael Dorner";
 				TargetAttributes = {
-					A316F9CF1C297C2400A3753E = {
+					5F8561D01C415CA700316A22 = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					A316F9D91C297C2500A3753E = {
+					5F8561DA1C415CA700316A22 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					5F8561F41C415D2400316A22 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					5F8561FD1C415D2500316A22 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
-			buildConfigurationList = A316F9CA1C297C2400A3753E /* Build configuration list for PBXProject "ByteBackpacker" */;
+			buildConfigurationList = 5F8561CB1C415CA700316A22 /* Build configuration list for PBXProject "ByteBackpacker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = A316F9C61C297C2400A3753E;
-			productRefGroup = A316F9D11C297C2400A3753E /* Products */;
+			mainGroup = 5F8561C71C415CA700316A22;
+			productRefGroup = 5F8561D21C415CA700316A22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A316F9CF1C297C2400A3753E /* ByteBackpacker */,
-				A316F9D91C297C2500A3753E /* ByteBackpackerTests */,
+				5F8561D01C415CA700316A22 /* ByteBackpacker iOS */,
+				5F8561DA1C415CA700316A22 /* ByteBackpacker iOS Tests */,
+				5F8561F41C415D2400316A22 /* ByteBackpacker OS X */,
+				5F8561FD1C415D2500316A22 /* ByteBackpacker OS X Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A316F9CE1C297C2400A3753E /* Resources */ = {
+		5F8561CF1C415CA700316A22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A316F9D81C297C2500A3753E /* Resources */ = {
+		5F8561D91C415CA700316A22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8561F31C415D2400316A22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8561FC1C415D2500316A22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,34 +312,54 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A316F9CB1C297C2400A3753E /* Sources */ = {
+		5F8561CC1C415CA700316A22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A316F9EB1C297C3200A3753E /* ByteBackpacker.swift in Sources */,
+				5F8561EC1C415CC300316A22 /* ByteBackpacker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A316F9D61C297C2500A3753E /* Sources */ = {
+		5F8561D71C415CA700316A22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A316F9E01C297C2500A3753E /* ByteBackpackerByteBackpackerDoubleTestsTests.swift in Sources */,
+				5F8561E11C415CA700316A22 /* ByteBackpackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8561F01C415D2400316A22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8561FA1C415D2500316A22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F8562041C415D2500316A22 /* ByteBackpackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A316F9DD1C297C2500A3753E /* PBXTargetDependency */ = {
+		5F8561DE1C415CA700316A22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A316F9CF1C297C2400A3753E /* ByteBackpacker */;
-			targetProxy = A316F9DC1C297C2500A3753E /* PBXContainerItemProxy */;
+			target = 5F8561D01C415CA700316A22 /* ByteBackpacker iOS */;
+			targetProxy = 5F8561DD1C415CA700316A22 /* PBXContainerItemProxy */;
+		};
+		5F8562011C415D2500316A22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F8561F41C415D2400316A22 /* ByteBackpacker OS X */;
+			targetProxy = 5F8562001C415D2500316A22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A316F9E21C297C2500A3753E /* Debug */ = {
+		5F8561E31C415CA700316A22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,8 +397,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ByteBackpacker;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -268,7 +409,7 @@
 			};
 			name = Debug;
 		};
-		A316F9E31C297C2500A3753E /* Release */ = {
+		5F8561E41C415CA700316A22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,6 +434,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -300,8 +442,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ByteBackpacker;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -309,7 +454,7 @@
 			};
 			name = Release;
 		};
-		A316F9E51C297C2500A3753E /* Debug */ = {
+		5F8561E61C415CA700316A22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -320,14 +465,14 @@
 				INFOPLIST_FILE = ByteBackpacker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sivantos.ByteBackpacker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpacker;
+				PRODUCT_NAME = ByteBackpacker;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		A316F9E61C297C2500A3753E /* Release */ = {
+		5F8561E71C415CA700316A22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -338,63 +483,147 @@
 				INFOPLIST_FILE = ByteBackpacker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sivantos.ByteBackpacker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpacker;
+				PRODUCT_NAME = ByteBackpacker;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		A316F9E81C297C2500A3753E /* Debug */ = {
+		5F8561E91C415CA700316A22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = ByteBackpackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sivantos.ByteBackpackerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		A316F9E91C297C2500A3753E /* Release */ = {
+		5F8561EA1C415CA700316A22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = ByteBackpackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sivantos.ByteBackpackerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5F8562071C415D2500316A22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ByteBackpacker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpacker;
+				PRODUCT_NAME = ByteBackpacker;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5F8562081C415D2500316A22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ByteBackpacker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpacker;
+				PRODUCT_NAME = ByteBackpacker;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5F85620A1C415D2500316A22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ByteBackpackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5F85620B1C415D2500316A22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ByteBackpackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.michaeldorner.ByteBackpackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A316F9CA1C297C2400A3753E /* Build configuration list for PBXProject "ByteBackpacker" */ = {
+		5F8561CB1C415CA700316A22 /* Build configuration list for PBXProject "ByteBackpacker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A316F9E21C297C2500A3753E /* Debug */,
-				A316F9E31C297C2500A3753E /* Release */,
+				5F8561E31C415CA700316A22 /* Debug */,
+				5F8561E41C415CA700316A22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A316F9E41C297C2500A3753E /* Build configuration list for PBXNativeTarget "ByteBackpacker" */ = {
+		5F8561E51C415CA700316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A316F9E51C297C2500A3753E /* Debug */,
-				A316F9E61C297C2500A3753E /* Release */,
+				5F8561E61C415CA700316A22 /* Debug */,
+				5F8561E71C415CA700316A22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		A316F9E71C297C2500A3753E /* Build configuration list for PBXNativeTarget "ByteBackpackerTests" */ = {
+		5F8561E81C415CA700316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A316F9E81C297C2500A3753E /* Debug */,
-				A316F9E91C297C2500A3753E /* Release */,
+				5F8561E91C415CA700316A22 /* Debug */,
+				5F8561EA1C415CA700316A22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		5F8562061C415D2500316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker OS X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F8562071C415D2500316A22 /* Debug */,
+				5F8562081C415D2500316A22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5F8562091C415D2500316A22 /* Build configuration list for PBXNativeTarget "ByteBackpacker OS X Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F85620A1C415D2500316A22 /* Debug */,
+				5F85620B1C415D2500316A22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A316F9C71C297C2400A3753E /* Project object */;
+	rootObject = 5F8561C81C415CA700316A22 /* Project object */;
 }
