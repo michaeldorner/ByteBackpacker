@@ -1,4 +1,5 @@
 <img src="/icon.png" width="200" align="right">
+[![Build Status](https://travis-ci.org/michaeldorner/ByteBackpacker.svg)](https://travis-ci.org/michaeldorner/ByteBackpacker)
 
 # ByteBackpacker
 
