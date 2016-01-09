@@ -15,7 +15,7 @@ ByteBackpacker is a small utility written in Swift to pack and unpack value type
 Although it can be used in the same way in Objective-C, I had clearly Swift projects in mind. The easiest way is to embed the `ByteBackpacker.framework`. Of course, Swift users can also do this, but actually I do not see any advantages.
 
 ## Usage
-Important for a proper usage: **ByteBackpacker does only supprt value types (e.g. numbers, structs, ...), but no reference types (e.g. classes)!** For further information see Discussion.
+Important for a proper usage: **ByteBackpacker does only supprt value types (e.g. numbers, structs, ...), but no reference types (e.g. classes)!** For further information see [Discussion](#discussion).
 
 ### Examples
 
