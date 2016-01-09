@@ -44,9 +44,9 @@ let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
 
 ### API
 
-`Byte` is a typealias for `UInt8`.
+`Byte` is a [`typealias`](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361) for `UInt8`.
 
-ByteOrder is an enum for Little Endian and Big Endian. Furthermore, there is the option for asking the platform you are using for the native byte order of the system: `ByteOrder.nativeByteOrder`. By default `.nativeByteOrder` is applied for packing and unpacking. 
+`ByteOrder` is an `enum` for [Little Endian and Big Endian](https://en.wikipedia.org/wiki/Endianness). Furthermore, there is the option for asking the platform you are using for the native byte order of the system: `ByteOrder.nativeByteOrder`. By default `.nativeByteOrder` is applied for packing and unpacking. 
 
 For packing value types into a `[Byte]`, use
 
