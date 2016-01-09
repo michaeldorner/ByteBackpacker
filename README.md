@@ -10,8 +10,7 @@ ByteBackpacker is a small utility written in Swift to pack and unpack value type
 1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/ByteBackpacker/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your project.
 2. No second step, you are done. 
 
-If you want, you can embed the `ByteBackpacker.framework`, but at the moment I do not see any advantages going this way. 
-
+Although it can be used in the same way in Objective-C, I had clearly Swift projects in mind. The easiest way is to embed the `ByteBackpacker.framework`. Of course, Swift users can also do this, but actually I do not see any advantages.
 
 ## Usage
 
