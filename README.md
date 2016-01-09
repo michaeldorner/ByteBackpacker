@@ -72,7 +72,7 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 
 - [ ] Add more test cases 
 - [ ] Add more examples and how-tos 
-- [ ] Find a solution for makign sure that `T` is a value type, but not a reference type 
+- [ ] Find a solution for making sure, that `T` is a value type, but not a reference type 
 
 ## Licence 
 
