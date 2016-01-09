@@ -54,11 +54,11 @@ For packing value types into a `[Byte]`, use
 
 For unpacking a `[Byte]` into a value type, use either
 
-```class func unpack<T>(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T```
-
-if you want to use type inference, or otherwise
-
 ```public class func unpack<T>(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T```
+
+or otherwise, if you want to use type inference
+
+```class func unpack<T>(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T```
 
 
 ## Discussion
