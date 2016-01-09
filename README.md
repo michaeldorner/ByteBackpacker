@@ -1,3 +1,5 @@
+<img src="/icon.png" width="200" align="right">
+
 # ByteBackpacker
 
 ByteBackpacker is a small utility written in Swift to pack and unpack value types into a `Byte` array. Additionally, there is a [`NSData`](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/) [extension](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html) to convert `NSData` objects into a `Byte` array. 
