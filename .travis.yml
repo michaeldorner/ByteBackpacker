@@ -4,7 +4,7 @@ sudo: false
 
 script:
 - xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "platform=iOS Simulator,name=iPhone 6" test
-- xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OSX" test
+- xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X" test
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) 
