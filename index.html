@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bytebackpacker by michaeldorner</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Bytebackpacker</h1>
+        <p>ByteBackpacker is a small utility written in Swift to pack value types into a Byte array and unpack them back. </p>
+
+        <p class="view"><a href="https://github.com/michaeldorner/ByteBackpacker">View the Project on GitHub <small>michaeldorner/ByteBackpacker</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/michaeldorner/ByteBackpacker/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/michaeldorner/ByteBackpacker/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/michaeldorner/ByteBackpacker">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="/icon.png" width="200" align="right">
+<a href="https://travis-ci.org/michaeldorner/ByteBackpacker"><img src="https://travis-ci.org/michaeldorner/ByteBackpacker.svg" alt="Build Status"></a> <a href="https://codecov.io/github/michaeldorner/ByteBackpacker?branch=master"><img src="https://codecov.io/github/michaeldorner/ByteBackpacker/coverage.svg?branch=master" alt="codecov.io"></a></p>
+
+<h1>
+<a id="bytebackpacker" class="anchor" href="#bytebackpacker" aria-hidden="true"><span class="octicon octicon-link"></span></a>ByteBackpacker</h1>
+
+<p>ByteBackpacker is a small utility written in Swift to pack value types into a <code>Byte</code> array and unpack them back. Additionally, there is a <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/"><code>NSData</code></a> <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html">extension</a> to convert <code>NSData</code> objects into a <code>Byte</code> array. </p>
+
+<p><code>Byte</code> is a <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361"><code>typealias</code></a> for <code>UInt8</code>.</p>
+
+<h2>
+<a id="embedding-in-projects" class="anchor" href="#embedding-in-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Embedding in projects</h2>
+
+<ol>
+<li>Copy the <a href="https://github.com/michaeldorner/ByteBackpacker/blob/master/ByteBackpacker/ByteBackpacker.swift"><code>ByteBackpacker.swift</code></a> file (containing the <code>ByteBackpacker</code> class) to your project.</li>
+<li>No second step, you are done. </li>
+</ol>
+
+<p>Although it can be used in the same way in Objective-C, I had clearly Swift projects in mind. The easiest way for Objective-C users is to embed the <code>ByteBackpacker.framework</code>. Of course, Swift users can also do this, but actually I do not see any advantages.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Important for a proper usage: <strong>ByteBackpacker does only support value types (e.g. numbers, structs, ...), but no reference types (e.g. classes)!</strong> For further information see <a href="#discussion">Discussion</a>.</p>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
+
+<h4>
+<a id="from-double-to-byte-and-from-byte-to-double" class="anchor" href="#from-double-to-byte-and-from-byte-to-double" aria-hidden="true"><span class="octicon octicon-link"></span></a>From <code>Double</code> to <code>[Byte]</code> and from <code>[Byte]</code> to <code>Double</code>
+</h4>
+
+<pre><code>let aDouble: Double = 1.0
+let byteArray: [Byte] = ByteBackpacker.pack(aDouble)
+
+// either without type inference
+let doubleFromByteArray: Double = ByteBackpacker.unpack(byteArray)
+let doubleFromByteArray = ByteBackpacker.unpack(byteArray) as Double
+
+// or with type inference, but explizit type parameter
+let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
+</code></pre>
+
+<h4>
+<a id="from-double-over-nsdata-to-byte-and-from-byte-to-double" class="anchor" href="#from-double-over-nsdata-to-byte-and-from-byte-to-double" aria-hidden="true"><span class="octicon octicon-link"></span></a>From <code>Double</code> over <code>NSData</code> to <code>[Byte]</code> and from <code>[Byte]</code> to <code>Double</code>
+</h4>
+
+<pre><code>var aDouble: Double = 1.0
+let data = NSData(bytes: &amp;aDouble, length: sizeof(Double.self))
+let byteArray = data.toByteArray()
+let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
+</code></pre>
+
+<h3>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h3>
+
+<p><code>Byte</code> is a <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361"><code>typealias</code></a> for <code>UInt8</code>.</p>
+
+<p><code>ByteOrder</code> is an <code>enum</code> for <a href="https://en.wikipedia.org/wiki/Endianness">Little Endian and Big Endian</a>. Furthermore, there is the option for asking the platform you are using for the native byte order of the system: <code>ByteOrder.nativeByteOrder</code>. By default <code>.nativeByteOrder</code> is applied for packing and unpacking. </p>
+
+<p>For packing value types into a <code>[Byte]</code>, use</p>
+
+<p><code>class func pack&lt;T&gt;(var value: T, byteOrder: ByteOrder = .nativeByteOrder) -&gt; [Byte]</code></p>
+
+<p>For unpacking a <code>[Byte]</code> into a value type, use either</p>
+
+<p><code>public class func unpack&lt;T&gt;(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -&gt; T</code></p>
+
+<p>or otherwise, if you want to use type inference</p>
+
+<p><code>class func unpack&lt;T&gt;(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -&gt; T</code></p>
+
+<h2>
+<a id="discussion" class="anchor" href="#discussion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Discussion</h2>
+
+<p>Unfortunately, there is no suitable option for specifying value types in Swift's generics (see <a href="http://stackoverflow.com/q/28782532/1864294">here the discussion on stackoverflow</a>). It would be awesome to specify our methods like <code>func (un)pack&lt;T: Any where T: ~AnyClass&gt;(...)</code>, but until today Swift does not provide us this opportunities. We will see what the future brings us.</p>
+
+<p>I would love to improve this project. Tell me your ideas, here in github, via mail or in <a href="http://codereview.stackexchange.com/questions/114730/type-to-byte-array-conversion-in-swift">codereview.stackexchange.com</a>.</p>
+
+<h2>
+<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributions</h2>
+
+<ul>
+<li>[ ] Add more test cases </li>
+<li>[ ] Add more examples and how-tos </li>
+<li>[ ] Find a solution for making sure, that <code>T</code> is a value type, but not a reference type </li>
+</ul>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Licence</h2>
+
+<p>ByteBackpacker is released under the MIT license. See <a href="LICENSE">LICENSE</a> for details.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/michaeldorner">michaeldorner</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
