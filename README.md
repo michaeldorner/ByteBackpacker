@@ -71,10 +71,17 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 
 ## Contributions
 
-- [ ] Add more test cases 
-- [ ] Add more examples and how-tos 
+### To-Do
+
 - [ ] Find a solution for making sure, that `T` is a value type, but not a reference type 
+- [ ] Add more examples and how-tos 
+- [ ] Add more test cases 
 
-## Licence 
 
-ByteBackpacker is released under the MIT license. See [LICENSE](LICENSE) for details.
+### Acknowledgements
+
+Thanks to [Martin R](http://codereview.stackexchange.com/users/35991/martin-r) for [his suggestions in codereview.stackexchange.com](http://codereview.stackexchange.com/a/114738/61640).
+
+## License 
+
+ByteBackpacker is released under the MIT license. See [LICENSE](LICENSE) for more details.
