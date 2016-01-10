@@ -2,8 +2,8 @@ language: swift
 osx_image: xcode7.2
 
 script:
-- xcodebuild build test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "platform=iOS Simulator,name=iPhone 6" 
-- xcodebuild build test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X"
+- xcodebuild test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "platform=iOS Simulator,name=iPhone 6" 
+- xcodebuild test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X"
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) 
