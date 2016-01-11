@@ -28,7 +28,7 @@ let byteArray: [Byte] = ByteBackpacker.pack(aDouble)
 
 // either without type inference
 let doubleFromByteArray: Double = ByteBackpacker.unpack(byteArray)
-let doubleFromByteArray = ByteBackpacker.unpack(byteArray) as Double
+/* or */ let doubleFromByteArray = ByteBackpacker.unpack(byteArray) as Double
 
 // or with type inference, but explizit type parameter
 let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
@@ -73,10 +73,10 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 
 ### To-Do
 
-- [*] Find a solution for making sure, that `T` is a value type, but not a reference type 
-- [ ] Add documentation to the source code
-- [ ] Add more examples and how-tos 
+- [x] Find a solution for making sure, that `T` is a value type, but not a reference type 
+- [ ] Add documentation to the source code for a nice Xcode integration
 - [ ] Add more test cases 
+- [ ] Add more examples and how-tos if requested
 
 
 ### Acknowledgements
