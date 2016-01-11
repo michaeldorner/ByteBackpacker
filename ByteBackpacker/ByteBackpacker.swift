@@ -4,7 +4,9 @@ This file is part of ByteBackpacker Project. It is subject to the license terms 
 
 import Foundation
 
+
 public typealias Byte = UInt8
+
 
 public enum ByteOrder {
     case BigEndian
@@ -15,53 +17,30 @@ public enum ByteOrder {
 
 
 public class ByteBackpacker {
-    /**
-     @warning *Important:* This function required an explicit type definition, because no type inference is possible:
-     
-        let d: Double = ByteBackPacker.unpack(byteArray) 
-     
-     or
-     
-        let d = ByteBackPacker.unpack(byteArray) as Double
-     
-     - parameter valueByteArray: <#valueByteArray description#>
-     - parameter byteOrder:      <#byteOrder description#>
-     
-     - returns: <#return value description#>
-     */
     
-    public class func unpack<T>(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
+    private static let referenceTypeErrorString = "TypeError: Reference Types are not supported."
+    
+    
+    public class func unpack<T: Any>(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
+        assert(!(T.self is AnyObject), referenceTypeErrorString)
         let bytes = (byteOrder == .LittleEndian) ? valueByteArray : valueByteArray.reverse()
         return bytes.withUnsafeBufferPointer {
             return UnsafePointer<T>($0.baseAddress).memory
         }
     }
     
-    /**
-     <#Description#>
-     
-     - parameter valueByteArray: <#valueByteArray description#>
-     - parameter type:           <#type description#>
-     - parameter byteOrder:      <#byteOrder description#>
-     
-     - returns: <#return value description#>
-     */
-    public class func unpack<T>(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
+
+    public class func unpack<T: Any>(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
+        assert(!(T.self is AnyObject), referenceTypeErrorString)
         let bytes = (byteOrder == .LittleEndian) ? valueByteArray : valueByteArray.reverse()
         return bytes.withUnsafeBufferPointer {
             return UnsafePointer<T>($0.baseAddress).memory
         }
     }
     
-    /**
-     <#Description#>
-     
-     - parameter value:     <#value description#>
-     - parameter byteOrder: <#byteOrder description#>
-     
-     - returns: <#return value description#>
-     */
-    public class func pack<T>(var value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
+
+    public class func pack<T: Any>(var value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
+        assert(!(T.self is AnyObject), referenceTypeErrorString)
         let valueByteArray = withUnsafePointer(&value) {
             Array(UnsafeBufferPointer(start: UnsafePointer<Byte>($0), count: sizeof(T)))
         }
@@ -71,11 +50,7 @@ public class ByteBackpacker {
 
 
 public extension NSData {
-    /**
-     <#Description#>
-     
-     - returns: A Byte array.
-     */
+
     func toByteArray() -> [Byte] {
         let count = length / sizeof(Byte)
         var array = [Byte](count: count, repeatedValue: 0)
