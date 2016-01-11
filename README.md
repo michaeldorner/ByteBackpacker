@@ -64,7 +64,7 @@ or otherwise, if you want to use type inference
 
 ## Discussion
 
-Unfortunately, there is no suitable option for specifying value types in Swift's generics (see [here the discussion on stackoverflow](http://stackoverflow.com/q/28782532/1864294)). It would be awesome to specify our methods like `func (un)pack<T: Any where T: ~AnyClass>(...)`, but until today Swift does not provide us this opportunities. We will see what the future brings us.
+Unfortunately, there is no suitable option for specifying value types in Swift's generics (see [here the discussion on stackoverflow](http://stackoverflow.com/q/28782532/1864294)). It would be awesome to specify our methods like `func (un)pack<T: Any where T: ~AnyClass>(...)`, but until today Swift does not provide us this opportunities. We will see what the future brings.
 
 I would love to improve this project. Tell me your ideas, here in github, via mail or in [codereview.stackexchange.com](http://codereview.stackexchange.com/questions/114730/type-to-byte-array-conversion-in-swift).
 
