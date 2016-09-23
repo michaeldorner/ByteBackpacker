@@ -24,7 +24,7 @@ Important for a proper usage: **ByteBackpacker does only support value types (e.
 
 ### Examples
 
-All examples can be seen running in the ['ByteBackpackerPlayground.playground'](ByteBackpackerPlayground.playground). Let's have a look on some general use cases:
+All examples can be seen running in the [`ByteBackpackerPlayground.playground`](ByteBackpackerPlayground.playground). Let's have a look on some general use cases:
 
 #### From `Double` to `[Byte]`
 ```
