@@ -7,7 +7,7 @@ import XCTest
 
 class ByteBackpackerDoubleTests: XCTestCase {
     
-    private let testByteArrays: [Double: [Byte]] = [
+    fileprivate let testByteArrays: [Double: [UInt8]] = [
         -8: [0, 0, 0, 0, 0, 0, 112, 63],
         -7: [0, 0, 0, 0, 0, 0, 128, 63],
         -6: [0, 0, 0, 0, 0, 0, 144, 63],
@@ -29,38 +29,41 @@ class ByteBackpackerDoubleTests: XCTestCase {
     
     
     func testRandomDouble() {
-        testRandomDouble(1000, byteOrder: .LittleEndian)
-        testRandomDouble(1000, byteOrder: .BigEndian)
+        testRandomDouble(1000, byteOrder: .littleEndian)
+        testRandomDouble(1000, byteOrder: .bigEndian)
     }
     
     
     func testSelectedDouble() {
-        testSelectedDouble(.LittleEndian)
-        testSelectedDouble(.BigEndian)
+        testSelectedDouble(.littleEndian)
+        testSelectedDouble(.bigEndian)
     }
     
     
     func testNSData() {
         for index in -1000...1000 {
             var double = Double(index)
-            let data = NSData(bytes: &double, length: sizeof(Double.self))
+            let bytes = withUnsafePointer(to: &double) {
+                return $0.withMemoryRebound(to: UInt8.self, capacity: 1){ $0 }
+            }
+            let data = Data(bytes: bytes, count: MemoryLayout<Double>.size)
             let byteArray = data.toByteArray()
-            let doubleFromByteArray = ByteBackpacker.unpack(byteArray, byteOrder: .LittleEndian) as Double
+            let doubleFromByteArray = ByteBackpacker.unpack(byteArray, byteOrder: .littleEndian) as Double
             XCTAssertEqual(double, doubleFromByteArray)
         }
     }
     
     
     func testByteOrder() {
-        XCTAssertEqual(ByteOrder.nativeByteOrder, ByteOrder.LittleEndian)
+        XCTAssertEqual(ByteOrder.nativeByteOrder, ByteOrder.littleEndian)
     }
     
     
-    private func testSelectedDouble(byteOrder: ByteOrder) {
+    fileprivate func testSelectedDouble(_ byteOrder: ByteOrder) {
         for (p, byteArray_) in testByteArrays {
-            var byteArray: [Byte]
-            if byteOrder == .BigEndian {
-                byteArray = byteArray_.reverse()
+            var byteArray: [UInt8]
+            if byteOrder == .bigEndian {
+                byteArray = byteArray_.reversed()
             }
             else {
                 byteArray = byteArray_
@@ -74,23 +77,25 @@ class ByteBackpackerDoubleTests: XCTestCase {
         }
         
         for (p, byteArray_) in testByteArrays {
-            let byteArray: [Byte] = byteArray_.reverse()
+            let byteArray: [UInt8] = byteArray_.reversed()
             let number = pow(2.0, p)
-            let packedByteArray = ByteBackpacker.pack(number, byteOrder: .BigEndian)
+            let packedByteArray = ByteBackpacker.pack(number, byteOrder: .bigEndian)
             XCTAssertEqual(packedByteArray, byteArray)
             
-            let unpackedNumber: Double = ByteBackpacker.unpack(byteArray, byteOrder: .BigEndian)
+            let unpackedNumber: Double = ByteBackpacker.unpack(byteArray, byteOrder: .bigEndian)
             XCTAssertEqual(unpackedNumber, number)
         }
     }
     
     
-    private func testRandomDouble(N: Int, byteOrder: ByteOrder) {
-        for var counter = 0; counter < N; counter++ {
+    fileprivate func testRandomDouble(_ N: Int, byteOrder: ByteOrder) {
+        for counter in 0 ..< N {
             var value: Double = Double(arc4random())
-            
-            let dataNumber: NSData = NSData.init(bytes: &value, length: sizeof(Double.self))
-            let byteArrayFromNSData: [Byte] = (byteOrder == .LittleEndian) ? dataNumber.toByteArray() : dataNumber.toByteArray().reverse()
+            let bytes = withUnsafePointer(to: &value) {
+                return $0.withMemoryRebound(to: UInt8.self, capacity: 1){ $0 }
+            }
+            let dataNumber: Data = Data.init(bytes: bytes, count: MemoryLayout<Double>.size)
+            let byteArrayFromNSData: [UInt8] = (byteOrder == .littleEndian) ? dataNumber.toByteArray() : dataNumber.toByteArray().reversed()
             
             let packedByteArray = ByteBackpacker.pack(value, byteOrder: byteOrder)
             

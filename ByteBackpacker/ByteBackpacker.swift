@@ -9,52 +9,57 @@ public typealias Byte = UInt8
 
 
 public enum ByteOrder {
-    case BigEndian
-    case LittleEndian
+    case bigEndian
+    case littleEndian
     
-    static let nativeByteOrder: ByteOrder = (Int(CFByteOrderGetCurrent()) == Int(CFByteOrderLittleEndian.rawValue)) ? .LittleEndian : .BigEndian
+    static let nativeByteOrder: ByteOrder = (Int(CFByteOrderGetCurrent()) == Int(CFByteOrderLittleEndian.rawValue)) ? .littleEndian : .bigEndian
 }
 
 
-public class ByteBackpacker {
+open class ByteBackpacker {
     
-    private static let referenceTypeErrorString = "TypeError: Reference Types are not supported."
+    fileprivate static let referenceTypeErrorString = "TypeError: Reference Types are not supported."
     
     
-    public class func unpack<T: Any>(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
+    open class func unpack<T: Any>(_ valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
         assert(!(T.self is AnyObject), referenceTypeErrorString)
-        let bytes = (byteOrder == .LittleEndian) ? valueByteArray : valueByteArray.reverse()
+        let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
         return bytes.withUnsafeBufferPointer {
-            return UnsafePointer<T>($0.baseAddress).memory
+            return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
+                $0.pointee
+            }
         }
     }
     
 
-    public class func unpack<T: Any>(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
+    open class func unpack<T: Any>(_ valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
         assert(!(T.self is AnyObject), referenceTypeErrorString)
-        let bytes = (byteOrder == .LittleEndian) ? valueByteArray : valueByteArray.reverse()
+        let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
         return bytes.withUnsafeBufferPointer {
-            return UnsafePointer<T>($0.baseAddress).memory
+            return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
+                $0.pointee
+            }
         }
     }
     
 
-    public class func pack<T: Any>(var value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
+    public class func pack<T: Any>(_ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
+        var value = value
         assert(!(T.self is AnyObject), referenceTypeErrorString)
-        let valueByteArray = withUnsafePointer(&value) {
-            Array(UnsafeBufferPointer(start: UnsafePointer<Byte>($0), count: sizeof(T)))
+        let valueByteArray = withUnsafePointer(to: &value) {
+            Array(UnsafeBufferPointer(start: $0.withMemoryRebound(to: Byte.self, capacity: 1){$0}, count: MemoryLayout<T>.size))
         }
-        return (byteOrder == .LittleEndian) ? valueByteArray : valueByteArray.reverse()
+        return (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
     }
 }
 
 
-public extension NSData {
+public extension Data {
 
     func toByteArray() -> [Byte] {
-        let count = length / sizeof(Byte)
-        var array = [Byte](count: count, repeatedValue: 0)
-        getBytes(&array, length:count * sizeof(Byte))
+        let count = self.count / MemoryLayout<Byte>.size
+        var array = [Byte](repeating: 0, count: count)
+        copyBytes(to: &array, count:count * MemoryLayout<Byte>.size)
         return array
     }
 }
