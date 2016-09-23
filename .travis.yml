@@ -1,14 +1,9 @@
 language: objective-c
 osx_image: xcode8
 
-before_install:
-
 script:
 - xcodebuild test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "platform=iOS Simulator,name=iPhone 6"
 - xcodebuild test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X"
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
-
-after_failure:
-  - tail -n 500 build.log
