@@ -6,7 +6,8 @@ language: objective-c
 osx_image: xcode8
 
 script:
-- xcodebuild test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X"
+- xcodebuild -verbose -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X" build test 
+- xcodebuild -verbose -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "platform=iOS Simulator,name=iPhone 6" build test
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)  -J 'ByteBackpacker'
