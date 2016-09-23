@@ -43,7 +43,10 @@ class ByteBackpackerDoubleTests: XCTestCase {
     func testNSData() {
         for index in -1000...1000 {
             var double = Double(index)
-            let data = Data(bytes: UnsafePointer<UInt8>(&double), count: sizeof(Double.self))
+            let bytes = withUnsafePointer(to: &double) {
+                return $0.withMemoryRebound(to: UInt8.self, capacity: 1){ $0 }
+            }
+            let data = Data(bytes: bytes, count: MemoryLayout<Double>.size)
             let byteArray = data.toByteArray()
             let doubleFromByteArray = ByteBackpacker.unpack(byteArray, byteOrder: .littleEndian) as Double
             XCTAssertEqual(double, doubleFromByteArray)
@@ -88,8 +91,10 @@ class ByteBackpackerDoubleTests: XCTestCase {
     fileprivate func testRandomDouble(_ N: Int, byteOrder: ByteOrder) {
         for counter in 0 ..< N {
             var value: Double = Double(arc4random())
-            
-            let dataNumber: Data = Data.init(bytes: UnsafePointer<UInt8>(&value), count: sizeof(Double.self))
+            let bytes = withUnsafePointer(to: &value) {
+                return $0.withMemoryRebound(to: UInt8.self, capacity: 1){ $0 }
+            }
+            let dataNumber: Data = Data.init(bytes: bytes, count: MemoryLayout<Double>.size)
             let byteArrayFromNSData: [UInt8] = (byteOrder == .littleEndian) ? dataNumber.toByteArray() : dataNumber.toByteArray().reversed()
             
             let packedByteArray = ByteBackpacker.pack(value, byteOrder: byteOrder)
