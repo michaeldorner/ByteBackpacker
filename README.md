@@ -1,4 +1,5 @@
 <img src="https://raw.githubusercontent.com/michaeldorner/ByteBackpacker/master/icon.png" width="200" align="right">
+![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)
 [![Build Status](https://travis-ci.org/michaeldorner/ByteBackpacker.svg)](https://travis-ci.org/michaeldorner/ByteBackpacker) [![codecov](https://codecov.io/gh/michaeldorner/ByteBackpacker/branch/master/graph/badge.svg)](https://codecov.io/gh/michaeldorner/ByteBackpacker)
 [![codebeat badge](https://codebeat.co/badges/390a34ec-d7ba-4165-bb38-c338247ec04a)](https://codebeat.co/projects/github-com-michaeldorner-bytebackpacker)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
