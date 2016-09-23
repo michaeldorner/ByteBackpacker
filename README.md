@@ -75,7 +75,7 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 
 ### To-Do
 
-- [x] Find a solution for making sure, that `T` is a value type, but not a reference type 
+- [ ] Find a solution for making sure, that `T` is a value type, but not a reference type 
 - [ ] Add documentation to the source code for a nice Xcode integration
 - [ ] Add more test cases 
 - [ ] Add more examples and how-tos if requested
@@ -83,7 +83,8 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 
 ### Acknowledgements
 
-Thanks to [Martin R](http://codereview.stackexchange.com/users/35991/martin-r) for [his suggestions in codereview.stackexchange.com](http://codereview.stackexchange.com/a/114738/61640).
+Thanks to [Martin R](http://codereview.stackexchange.com/users/35991/martin-r) for [his suggestions in codereview.stackexchange.com](http://codereview.stackexchange.com/a/114738/61640) and [iCodist](https://github.com/iCodist/ByteBackpacker) for his update to Swift 3 and Xcode 8. 
+
 
 ## License 
 
