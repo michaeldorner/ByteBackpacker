@@ -59,15 +59,15 @@ let dataFromByteArray = Data(bytes: byteArray_1)
 
 For packing value types into a `[Byte]`, use
 
-```class func pack<T>(var value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte]```
+```open class func pack<T: Any>( _ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte]```
 
 For unpacking a `[Byte]` into a value type, use either
 
-```public class func unpack<T>(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T```
+```open class func unpack<T: Any>(_ valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T```
 
 or otherwise, if you want to use type inference
 
-```class func unpack<T>(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T```
+```open class func unpack<T: Any>(_ valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T```
 
 
 ## Discussion
