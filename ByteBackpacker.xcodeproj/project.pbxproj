@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F58BA641D956E8600C3B403 /* ByteBackpackerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ByteBackpackerPlayground.playground; sourceTree = "<group>"; };
 		5F8561D11C415CA700316A22 /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8561D41C415CA700316A22 /* ByteBackpacker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteBackpacker.h; sourceTree = "<group>"; };
 		5F8561D61C415CA700316A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		5F8561C71C415CA700316A22 = {
 			isa = PBXGroup;
 			children = (
+				5F58BA641D956E8600C3B403 /* ByteBackpackerPlayground.playground */,
 				5F8561D31C415CA700316A22 /* ByteBackpacker */,
 				5F8561DF1C415CA700316A22 /* ByteBackpackerTests */,
 				5F8561D21C415CA700316A22 /* Products */,

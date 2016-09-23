@@ -6,7 +6,8 @@
 
 # ByteBackpacker
 
-ByteBackpacker is a small utility written in Swift to pack value types into a `Byte` array and unpack them back. Additionally, there is a [`NSData`](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/) [extension](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html) to convert `NSData` objects into a `Byte` array. 
+ByteBackpacker is a small utility written in Swift to pack value types into a `Byte` array and unpack them back. Additionally, there is a [`Data`](https://developer.apple.com/reference/foundation/data) (formerly `NSData`) [extension](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html) to convert `Data` objects into a `Byte` array. 
+
 
 `Byte` is a [`typealias`](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361) for `UInt8`.
 
@@ -23,28 +24,35 @@ Important for a proper usage: **ByteBackpacker does only support value types (e.
 
 ### Examples
 
-#### From `Double` to `[Byte]` and from `[Byte]` to `Double`
+All examples can be seen running in the ['ByteBackpackerPlayground.playground'](ByteBackpackerPlayground.playground). Let's have a look on some general use cases:
 
+#### From `Double` to `[Byte]`
 ```
 let aDouble: Double = 1.0
-let byteArray: [Byte] = ByteBackpacker.pack(aDouble)
-
-// either without type inference
-let doubleFromByteArray: Double = ByteBackpacker.unpack(byteArray)
-/* or */ let doubleFromByteArray = ByteBackpacker.unpack(byteArray) as Double
-
-// or with type inference, but explizit type parameter
-let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
+let aByteArray: [Byte] = ByteBackpacker.pack(aDouble)
 ```
 
-#### From `Double` over `NSData` to `[Byte]` and from `[Byte]` to `Double`
+#### From `[Byte]` to `Double`
+```
+let option_1: Double = ByteBackpacker.unpack(aByteArray)
+let option_2 = ByteBackpacker.unpack(aByteArray) as Double
+let option_3 = ByteBackpacker.unpack(aByteArray, toType: Double.self)
+```
 
+#### From `Double` to `Data` to `[Byte]` to `Double`
 ```
-var aDouble: Double = 1.0
-let data = NSData(bytes: &aDouble, length: sizeof(Double.self))
-let byteArray = data.toByteArray()
-let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
+var anotherDouble: Double = 2.0
+let data = Data(bytes: &anotherDouble, count: MemoryLayout<Double>.size)
+var byteArrayFromNSData = data.toByteArray()
+let doubleFromByteArray = ByteBackpacker.unpack(byteArrayFromNSData, toType: Double.self)
 ```
+
+#### From `[Byte]` to `Data`
+```
+let anotherByteArray: [Byte] = [0, 0, 0, 0, 0, 0, 8, 64]
+let dataFromByteArray = Data(bytes: anotherByteArray)
+```
+
 
 ### API
 
@@ -54,15 +62,15 @@ let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
 
 For packing value types into a `[Byte]`, use
 
-```class func pack<T>(var value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte]```
+```open class func pack<T: Any>( _ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte]```
 
 For unpacking a `[Byte]` into a value type, use either
 
-```public class func unpack<T>(valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T```
+```open class func unpack<T: Any>(_ valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T```
 
 or otherwise, if you want to use type inference
 
-```class func unpack<T>(valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T```
+```open class func unpack<T: Any>(_ valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T```
 
 
 ## Discussion
