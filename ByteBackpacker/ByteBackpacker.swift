@@ -22,7 +22,7 @@ open class ByteBackpacker {
     
     
     open class func unpack<T: Any>(_ valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
-        assert(!(T.self is AnyObject), referenceTypeErrorString)
+        //assert(!(type(of: T.self) is AnyObject), referenceTypeErrorString) // does not work in Swift 3
         let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
         return bytes.withUnsafeBufferPointer {
             return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
@@ -33,7 +33,7 @@ open class ByteBackpacker {
     
 
     open class func unpack<T: Any>(_ valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
-        assert(!(T.self is AnyObject), referenceTypeErrorString)
+        //assert(!(T.self is AnyObject), referenceTypeErrorString) // does not work in Swift 3
         let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
         return bytes.withUnsafeBufferPointer {
             return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
@@ -43,9 +43,9 @@ open class ByteBackpacker {
     }
     
 
-    public class func pack<T: Any>(_ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
-        var value = value
-        assert(!(T.self is AnyObject), referenceTypeErrorString)
+    public class func pack<T: Any>( _ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
+        //assert(!(T.self is AnyObject), referenceTypeErrorString) // does not work in Swift 3
+        var value = value // inout works only for var not let types
         let valueByteArray = withUnsafePointer(to: &value) {
             Array(UnsafeBufferPointer(start: $0.withMemoryRebound(to: Byte.self, capacity: 1){$0}, count: MemoryLayout<T>.size))
         }
