@@ -89,7 +89,7 @@ class ByteBackpackerDoubleTests: XCTestCase {
     
     
     fileprivate func testRandomDouble(_ N: Int, byteOrder: ByteOrder) {
-        for counter in 0 ..< N {
+        for _ in 0 ..< N {
             var value: Double = Double(arc4random())
             let bytes = withUnsafePointer(to: &value) {
                 return $0.withMemoryRebound(to: UInt8.self, capacity: 1){ $0 }
