@@ -23,28 +23,33 @@ Important for a proper usage: **ByteBackpacker does only support value types (e.
 
 ### Examples
 
-#### From `Double` to `[Byte]` and from `[Byte]` to `Double`
-
+#### From `Double` to `[Byte]`
 ```
 let aDouble: Double = 1.0
 let byteArray: [Byte] = ByteBackpacker.pack(aDouble)
-
-// either without type inference
-let doubleFromByteArray: Double = ByteBackpacker.unpack(byteArray)
-/* or */ let doubleFromByteArray = ByteBackpacker.unpack(byteArray) as Double
-
-// or with type inference, but explizit type parameter
-let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
 ```
 
-#### From `Double` over `NSData` to `[Byte]` and from `[Byte]` to `Double`
+#### From `[Byte]` to `Double`
+```
+let option_1: Double = ByteBackpacker.unpack(byteArray)
+let option_2 = ByteBackpacker.unpack(byteArray) as Double
+let option_3 = ByteBackpacker.unpack(byteArray, toType: Double.self)
+```
 
+#### From `Double` to `Data` to `[Byte]` to `Double`
 ```
-var aDouble: Double = 1.0
-let data = NSData(bytes: &aDouble, length: sizeof(Double.self))
-let byteArray = data.toByteArray()
-let doubleFromByteArray = ByteBackpacker.unpack(byteArray, toType: Double.self)
+var anotherDouble: Double = 2.0
+let data = Data(bytes: &anotherDouble, count: MemoryLayout<Double>.size)
+var byteArrayFromNSData = data.toByteArray()
+let doubleFromByteArray = ByteBackpacker.unpack(byteArrayFromNSData, toType: Double.self)
 ```
+
+#### From `[Byte]` to `Data`
+```
+let byteArray_1: [Byte] = [0, 0, 0, 0, 0, 0, 8, 64]
+let dataFromByteArray = Data(bytes: byteArray_1)
+```
+
 
 ### API
 
