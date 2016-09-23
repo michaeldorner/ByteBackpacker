@@ -43,7 +43,7 @@ open class ByteBackpacker {
     }
     
 
-    public class func pack<T: Any>( _ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
+    open class func pack<T: Any>( _ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
         //assert(!(T.self is AnyObject), referenceTypeErrorString) // does not work in Swift 3
         var value = value // inout works only for var not let types
         let valueByteArray = withUnsafePointer(to: &value) {
@@ -63,3 +63,5 @@ public extension Data {
         return array
     }
 }
+
+
