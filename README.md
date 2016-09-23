@@ -24,17 +24,19 @@ Important for a proper usage: **ByteBackpacker does only support value types (e.
 
 ### Examples
 
+All examples can be seen running in the ['ByteBackpackerPlayground.playground'](ByteBackpackerPlayground.playground). Let's have a look on some general use cases:
+
 #### From `Double` to `[Byte]`
 ```
 let aDouble: Double = 1.0
-let byteArray: [Byte] = ByteBackpacker.pack(aDouble)
+let aByteArray: [Byte] = ByteBackpacker.pack(aDouble)
 ```
 
 #### From `[Byte]` to `Double`
 ```
-let option_1: Double = ByteBackpacker.unpack(byteArray)
-let option_2 = ByteBackpacker.unpack(byteArray) as Double
-let option_3 = ByteBackpacker.unpack(byteArray, toType: Double.self)
+let option_1: Double = ByteBackpacker.unpack(aByteArray)
+let option_2 = ByteBackpacker.unpack(aByteArray) as Double
+let option_3 = ByteBackpacker.unpack(aByteArray, toType: Double.self)
 ```
 
 #### From `Double` to `Data` to `[Byte]` to `Double`
@@ -47,8 +49,8 @@ let doubleFromByteArray = ByteBackpacker.unpack(byteArrayFromNSData, toType: Dou
 
 #### From `[Byte]` to `Data`
 ```
-let byteArray_1: [Byte] = [0, 0, 0, 0, 0, 0, 8, 64]
-let dataFromByteArray = Data(bytes: byteArray_1)
+let anotherByteArray: [Byte] = [0, 0, 0, 0, 0, 0, 8, 64]
+let dataFromByteArray = Data(bytes: anotherByteArray)
 ```
 
 
