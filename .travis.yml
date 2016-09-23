@@ -6,4 +6,4 @@ script:
 - xcodebuild test -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X"
 
 after_success:
-- codecov
+- bash <(curl -s https://codecov.io/bash)  -J 'ByteBackpacker'
