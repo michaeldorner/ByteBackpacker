@@ -1,4 +1,4 @@
-language: objective-c
+language: generic
 osx_image: xcode8
 
 before_install:
