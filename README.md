@@ -101,7 +101,7 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 
 ### Acknowledgements
 
-Thanks to 
+Many thanks to 
 * [Martin R](http://codereview.stackexchange.com/users/35991/martin-r) for [his suggestions in codereview.stackexchange.com](http://codereview.stackexchange.com/a/114738/61640) 
 * [iCodist](https://github.com/iCodist/ByteBackpacker) for his update to Swift 3 and Xcode 8 
 
