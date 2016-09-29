@@ -6,12 +6,12 @@
 
 # ByteBackpacker
 
-> ByteBackpacker is a small utility written in Swift to pack value types into a `Byte` array and unpack them back. 
+> ByteBackpacker is a small utility written in Swift 3 to pack value types into a `Byte`¹ array and unpack them back. 
 
 Additionally, there is a [`Data`](https://developer.apple.com/reference/foundation/data) (formerly `NSData`) [extension](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html) to convert `Data` objects into a `Byte` array. 
 
 
-`Byte` is a [`typealias`](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361) for `UInt8`.
+¹ `Byte` is a [`typealias`](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361) for `UInt8`.
 
 ## Table of Contents
 
