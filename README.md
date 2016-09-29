@@ -33,8 +33,6 @@ Although it can be used in the same way in Objective-C, I had clearly Swift proj
 ## Usage
 Important for a proper usage: **ByteBackpacker does only support value types (e.g. numbers, structs, ...), but no reference types (e.g. classes)!** For further information see [Discussion](#discussion).
 
-### Examples
-
 All examples can be seen running in the [`ByteBackpackerPlayground.playground`](ByteBackpackerPlayground.playground). Let's have a look on some general use cases:
 
 #### From `Double` to `[Byte]`
