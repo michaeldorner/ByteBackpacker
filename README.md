@@ -25,8 +25,17 @@ Additionally, there is a [`Data`](https://developer.apple.com/reference/foundati
 
 ## Installation
 
-1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/ByteBackpacker/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your Swift 3 project (see [Version 1.0](https://github.com/michaeldorner/ByteBackpacker/releases/tag/1.0) for Swift 1 and Swift 2).
+1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/ByteBackpacker/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your  project.
 2. No second step, you are done. 
+
+(Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
+
+| Swift version | ByteBackpacker 1.0 | ByteBackpacker 1.1 and later |
+| :-: | :-: | :-: |
+| Swift 2.0 | ✓ | ✗ |
+| Swift 3.0 | ✗ | ✓ |
+
+Hopefully the APIs will be stable now.
 
 Although it can be used in the same way in Objective-C, I had clearly Swift projects in mind. The easiest way for Objective-C users is to embed the `ByteBackpacker.framework`. Of course, Swift users can also do this, but actually I do not see any advantages.
 
