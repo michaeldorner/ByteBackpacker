@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F4D819A1DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4D81991DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift */; };
+		5F4D819B1DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4D81991DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift */; };
 		5F8561D51C415CA700316A22 /* ByteBackpacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8561D41C415CA700316A22 /* ByteBackpacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F8561DC1C415CA700316A22 /* ByteBackpacker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8561D11C415CA700316A22 /* ByteBackpacker.framework */; };
-		5F8561E11C415CA700316A22 /* ByteBackpackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */; };
+		5F8561E11C415CA700316A22 /* ByteBackpackerValueTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561E01C415CA700316A22 /* ByteBackpackerValueTypeTests.swift */; };
 		5F8561EC1C415CC300316A22 /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */; };
 		5F8561FF1C415D2500316A22 /* ByteBackpacker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8561F51C415D2400316A22 /* ByteBackpacker.framework */; };
-		5F8562151C41670E00316A22 /* ByteBackpackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */; };
+		5F8562151C41670E00316A22 /* ByteBackpackerValueTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561E01C415CA700316A22 /* ByteBackpackerValueTypeTests.swift */; };
 		5F8562161C41677300316A22 /* ByteBackpacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8561D41C415CA700316A22 /* ByteBackpacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F8562171C41685300316A22 /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */; };
 /* End PBXBuildFile section */
@@ -35,12 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F4D81991DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteBackpackerReferenceTypeTests.swift; sourceTree = "<group>"; };
 		5F58BA641D956E8600C3B403 /* ByteBackpackerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ByteBackpackerPlayground.playground; sourceTree = "<group>"; };
 		5F8561D11C415CA700316A22 /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8561D41C415CA700316A22 /* ByteBackpacker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteBackpacker.h; sourceTree = "<group>"; };
 		5F8561D61C415CA700316A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F8561DB1C415CA700316A22 /* ByteBackpacker iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ByteBackpacker iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteBackpackerTests.swift; sourceTree = "<group>"; };
+		5F8561E01C415CA700316A22 /* ByteBackpackerValueTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteBackpackerValueTypeTests.swift; sourceTree = "<group>"; };
 		5F8561E21C415CA700316A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F8561EB1C415CC300316A22 /* ByteBackpacker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteBackpacker.swift; sourceTree = "<group>"; };
 		5F8561F51C415D2400316A22 /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +118,8 @@
 		5F8561DF1C415CA700316A22 /* ByteBackpackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				5F8561E01C415CA700316A22 /* ByteBackpackerTests.swift */,
+				5F8561E01C415CA700316A22 /* ByteBackpackerValueTypeTests.swift */,
+				5F4D81991DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift */,
 				5F8561E21C415CA700316A22 /* Info.plist */,
 			);
 			path = ByteBackpackerTests;
@@ -305,7 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8561E11C415CA700316A22 /* ByteBackpackerTests.swift in Sources */,
+				5F4D819A1DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift in Sources */,
+				5F8561E11C415CA700316A22 /* ByteBackpackerValueTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8562151C41670E00316A22 /* ByteBackpackerTests.swift in Sources */,
+				5F4D819B1DD640A800EF665B /* ByteBackpackerReferenceTypeTests.swift in Sources */,
+				5F8562151C41670E00316A22 /* ByteBackpackerValueTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@ This file is part of ByteBackpacker Project. It is subject to the license terms 
 import XCTest
 @testable import ByteBackpacker
 
-class ByteBackpackerDoubleTests: XCTestCase {
+class ByteBackpackerValueTypeTests: XCTestCase {
     
     fileprivate let testByteArrays: [Double: [UInt8]] = [
         -8: [0, 0, 0, 0, 0, 0, 112, 63],

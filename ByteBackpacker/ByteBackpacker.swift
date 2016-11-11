@@ -18,11 +18,10 @@ public enum ByteOrder {
 
 open class ByteBackpacker {
     
-    fileprivate static let referenceTypeErrorString = "TypeError: Reference Types are not supported."
-    
+    private static let referenceTypeErrorString = "TypeError: Reference Types are not supported."
     
     open class func unpack<T: Any>(_ valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
-        //assert(!(type(of: T.self) is AnyObject), referenceTypeErrorString) // does not work in Swift 3
+        assert(!(T.self is AnyClass), ByteBackpacker.referenceTypeErrorString)
         let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
         return bytes.withUnsafeBufferPointer {
             return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
@@ -33,7 +32,7 @@ open class ByteBackpacker {
     
 
     open class func unpack<T: Any>(_ valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
-        //assert(!(T.self is AnyObject), referenceTypeErrorString) // does not work in Swift 3
+        assert(!(T.self is AnyClass), ByteBackpacker.referenceTypeErrorString)
         let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
         return bytes.withUnsafeBufferPointer {
             return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
@@ -44,7 +43,7 @@ open class ByteBackpacker {
     
 
     open class func pack<T: Any>( _ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
-        //assert(!(T.self is AnyObject), referenceTypeErrorString) // does not work in Swift 3
+        assert(!(T.self is AnyClass), ByteBackpacker.referenceTypeErrorString)
         var value = value // inout works only for var not let types
         let valueByteArray = withUnsafePointer(to: &value) {
             Array(UnsafeBufferPointer(start: $0.withMemoryRebound(to: Byte.self, capacity: 1){$0}, count: MemoryLayout<T>.size))
