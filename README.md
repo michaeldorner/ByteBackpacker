@@ -102,10 +102,9 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 
 ### To-Do
 
-- [ ] Find a solution for making sure, that `T` is a value type, but not a reference type 
+- [x] Find a solution for making sure, that `T` is a value type, but not a reference type 
+- [ ] Find a solution for testing `assert()`
 - [ ] Add documentation to the source code for a nice Xcode integration
-- [ ] Add more test cases 
-- [ ] Add more examples and how-tos if requested
 
 
 ### Acknowledgements
