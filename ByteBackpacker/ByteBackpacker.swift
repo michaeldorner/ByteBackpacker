@@ -21,13 +21,7 @@ open class ByteBackpacker {
     private static let referenceTypeErrorString = "TypeError: Reference Types are not supported."
     
     open class func unpack<T: Any>(_ valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
-        assert(!(T.self is AnyClass), ByteBackpacker.referenceTypeErrorString)
-        let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
-        return bytes.withUnsafeBufferPointer {
-            return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
-                $0.pointee
-            }
-        }
+        return ByteBackpacker.unpack(valueByteArray, toType: T.self, byteOrder: byteOrder)
     }
     
 
