@@ -28,6 +28,21 @@ class ByteBackpackerValueTypeTests: XCTestCase {
     ]
     
     
+    func testTypeInference() {
+        let aDouble: Double = 1.0
+        let aByteArray: [Byte] = ByteBackpacker.pack(aDouble)
+        
+        let option_1: Double = ByteBackpacker.unpack(aByteArray)
+        XCTAssertEqual(option_1, aDouble)
+
+        let option_2 = ByteBackpacker.unpack(aByteArray) as Double
+        XCTAssertEqual(option_2, aDouble)
+
+        let option_3 = ByteBackpacker.unpack(aByteArray, toType: Double.self)
+        XCTAssertEqual(option_3, aDouble)
+    }
+    
+    
     func testRandomDouble() {
         testRandomDouble(1000, byteOrder: .littleEndian)
         testRandomDouble(1000, byteOrder: .bigEndian)
