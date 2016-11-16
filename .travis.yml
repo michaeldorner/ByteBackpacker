@@ -3,7 +3,7 @@ branches:
   - master
 
 language: objective-c
-osx_image: xcode8.1sneakpeek
+osx_image: xcode8.1
 
 script:
 - xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X" build test 
