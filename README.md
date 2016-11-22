@@ -2,7 +2,9 @@
 ![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)
 [![Build Status](https://travis-ci.org/michaeldorner/ByteBackpacker.svg)](https://travis-ci.org/michaeldorner/ByteBackpacker) [![codecov](https://codecov.io/gh/michaeldorner/ByteBackpacker/branch/master/graph/badge.svg)](https://codecov.io/gh/michaeldorner/ByteBackpacker)
 [![codebeat badge](https://codebeat.co/badges/390a34ec-d7ba-4165-bb38-c338247ec04a)](https://codebeat.co/projects/github-com-michaeldorner-bytebackpacker)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![CocoaPods](https://img.shields.io/cocoapods/p/ByteBackpacker.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/v/ByteBackpacker.svg)]()
+[![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
 
 # ByteBackpacker
 
@@ -27,6 +29,8 @@ Additionally, there is a [`Data`](https://developer.apple.com/reference/foundati
 
 1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/ByteBackpacker/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your  project.
 2. No second step, you are done. 
+
+Alternatively you can use [Cocoapods](https://cocoapods.org/pods/ByteBackpacker).
 
 (Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
 
