@@ -111,9 +111,8 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 ### To-Do
 
 - [x] Find a solution for making sure, that `T` is a value type, but not a reference type 
+- [x] Add documentation to the source code for a nice Xcode integration
 - [ ] Find a solution for testing `assert()`
-- [ ] Add documentation to the source code for a nice Xcode integration
-
 
 ### Acknowledgements
 
