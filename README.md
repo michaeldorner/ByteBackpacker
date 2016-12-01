@@ -30,7 +30,9 @@ Additionally, there is a [`Data`](https://developer.apple.com/reference/foundati
 1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/ByteBackpacker/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your  project.
 2. No second step, you are done. 
 
-Alternatively you can use [Cocoapods](https://cocoapods.org/pods/ByteBackpacker).
+Alternatively you can use [Cocoapods](https://cocoapods.org):
+
+    pod 'ByteBackpacker', '~> 1.1'
 
 (Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
 
