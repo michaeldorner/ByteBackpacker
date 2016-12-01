@@ -8,10 +8,14 @@ import Foundation
 public typealias Byte = UInt8
 
 
+/// ByteOrder
+///
+/// Byte order can be either big or little endian.
 public enum ByteOrder {
     case bigEndian
     case littleEndian
     
+    /// Machine specific byte order
     static let nativeByteOrder: ByteOrder = (Int(CFByteOrderGetCurrent()) == Int(CFByteOrderLittleEndian.rawValue)) ? .littleEndian : .bigEndian
 }
 
@@ -20,11 +24,24 @@ open class ByteBackpacker {
     
     private static let referenceTypeErrorString = "TypeError: Reference Types are not supported."
     
+    /// Unpack a byte array into type `T`
+    ///
+    /// - Parameters:
+    ///   - valueByteArray: Byte array to unpack
+    ///   - byteOrder: Byte order (wither little or big endian)
+    /// - Returns: Value type of type `T`
     open class func unpack<T: Any>(_ valueByteArray: [Byte], byteOrder: ByteOrder = .nativeByteOrder) -> T {
         return ByteBackpacker.unpack(valueByteArray, toType: T.self, byteOrder: byteOrder)
     }
     
-
+    
+    /// Unpack a byte array into type `T` for type inference
+    ///
+    /// - Parameters:
+    ///   - valueByteArray: Byte array to unpack
+    ///   - type: Origin type
+    ///   - byteOrder: Byte order (wither little or big endian)
+    /// - Returns: Value type of type `T`
     open class func unpack<T: Any>(_ valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
         assert(!(T.self is AnyClass), ByteBackpacker.referenceTypeErrorString)
         let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
@@ -35,7 +52,13 @@ open class ByteBackpacker {
         }
     }
     
-
+    
+    /// Pack method convinience method
+    ///
+    /// - Parameters:
+    ///   - value: value to pack of type `T`
+    ///   - byteOrder: Byte order (wither little or big endian)
+    /// - Returns: Byte array
     open class func pack<T: Any>( _ value: T, byteOrder: ByteOrder = .nativeByteOrder) -> [Byte] {
         assert(!(T.self is AnyClass), ByteBackpacker.referenceTypeErrorString)
         var value = value // inout works only for var not let types
@@ -48,7 +71,10 @@ open class ByteBackpacker {
 
 
 public extension Data {
-
+    
+    /// Extension for exporting Data (NSData) to byte array directly
+    ///
+    /// - Returns: Byte array
     func toByteArray() -> [Byte] {
         let count = self.count / MemoryLayout<Byte>.size
         var array = [Byte](repeating: 0, count: count)
