@@ -32,7 +32,7 @@ Additionally, there is a [`Data`](https://developer.apple.com/reference/foundati
 
 Alternatively you can use [Cocoapods](https://cocoapods.org):
 
-    pod 'ByteBackpacker', '~> 1.1'
+    pod 'ByteBackpacker', '~> 1.1.1'
 
 (Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
 
