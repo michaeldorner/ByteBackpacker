@@ -43,9 +43,7 @@ You have three options:
             ]
         )
 
-3. Use [Cocoapods](https://cocoapods.org):
-
-    pod 'ByteBackpacker'
+3. Use [Cocoapods](https://cocoapods.org): `pod 'ByteBackpacker'`
 
 Although it can be used in the same way in Objective-C, I had clearly Swift projects in mind. The easiest way for Objective-C users is to embed the `ByteBackpacker.framework`. Of course, Swift users can also do this, but actually I do not see any advantages.
 
