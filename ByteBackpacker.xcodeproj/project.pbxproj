@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5F2408BE1E0BE513004AF90F /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2408BD1E0BE513004AF90F /* Package.swift */; };
-		5F2408BF1E0BE513004AF90F /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2408BD1E0BE513004AF90F /* Package.swift */; };
 		5F2408C41E0BE575004AF90F /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2408C11E0BE54E004AF90F /* ByteBackpacker.swift */; };
 		5F2408C51E0BE58C004AF90F /* ByteBackpacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2408C11E0BE54E004AF90F /* ByteBackpacker.swift */; };
 		5F2408C61E0BE59D004AF90F /* ByteBackpacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2408C01E0BE54E004AF90F /* ByteBackpacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -324,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F2408C41E0BE575004AF90F /* ByteBackpacker.swift in Sources */,
-				5F2408BF1E0BE513004AF90F /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
