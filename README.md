@@ -6,6 +6,7 @@
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
 <img src="https://raw.githubusercontent.com/michaeldorner/ByteBackpacker/master/icon.png" width="200" align="right">
 
+
 # ByteBackpacker
 
 > ByteBackpacker is a small utility written in Swift 3 to pack value types into a `Byte`¹ array and unpack them back. 
@@ -22,28 +23,30 @@ Additionally, there is a [`Data`](https://developer.apple.com/reference/foundati
 - [API](#api)
 - [Discussion](#discussion)
 - [Contributions](#contributions)
+- [Versions](#versions)
 - [License](#license)
 
 
 ## Installation
 
-1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/ByteBackpacker/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your  project.
-2. No second step, you are done. 
+You have three options:
 
-Alternatively you can use [Cocoapods](https://cocoapods.org):
+1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/Sources/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your  project.
+2. Use [Swift Package Manager](https://swift.org/getting-started/#using-the-package-manager): 
 
-    pod 'ByteBackpacker', '~> 1.1.1'
+        import PackageDescription
 
-(Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
+        let package = Package(
+            name: "TestImport",
+            dependencies: [
+                .Package(url: "https://github.com/michaeldorner/ByteBackpacker.git")
+            ]
+        )
 
-| Swift version | ByteBackpacker 1.0 | ByteBackpacker 1.1 and later |
-| :-: | :-: | :-: |
-| Swift 2.0 | ✓ | ✗ |
-| Swift 3.0 | ✗ | ✓ |
-
-Hopefully the APIs will be stable now.
+3. Use [Cocoapods](https://cocoapods.org): `pod 'ByteBackpacker'`
 
 Although it can be used in the same way in Objective-C, I had clearly Swift projects in mind. The easiest way for Objective-C users is to embed the `ByteBackpacker.framework`. Of course, Swift users can also do this, but actually I do not see any advantages.
+
 
 ## Usage
 Important for a proper usage: **ByteBackpacker does only support value types (e.g. numbers, structs, ...), but no reference types (e.g. classes)!** For further information see [Discussion](#discussion).
@@ -99,7 +102,18 @@ or otherwise, if you want to use type inference
 
 ## Discussion
 
-Unfortunately, there is no way for specifying value types in Swift's generics (see [here the discussion on stackoverflow](http://stackoverflow.com/q/28782532/1864294)). It would be awesome to specify our methods like `func (un)pack<T: Any where T: ~AnyClass>(...)` to let the compiler check for value types. So far ByteBackpacker ensures the value type with `assert(...)`. 
+### Versions
+(Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
+
+| Swift version | ByteBackpacker 1.0 | ByteBackpacker 1.1 and later |
+| :-: | :-: | :-: |
+| Swift 2.0 | ✓ | ✗ |
+| Swift 3.0 | ✗ | ✓ |
+
+Hopefully the APIs will be stable now.
+
+### Generics
+There is no way for specifying value types in Swift's generics (see [here the discussion on stackoverflow](http://stackoverflow.com/q/28782532/1864294)). It would be awesome to specify our methods like `func (un)pack<T: Any where T: ~AnyClass>(...)` to let the compiler check for value types. So far ByteBackpacker ensures the value type with `assert(...)`. 
 
 An open question is how to test the `assert(...)` for this value type check. 
 
@@ -119,6 +133,18 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 Many thanks to 
 * [Martin R](http://codereview.stackexchange.com/users/35991/martin-r) for [his suggestions in codereview.stackexchange.com](http://codereview.stackexchange.com/a/114738/61640) 
 * [iCodist](https://github.com/iCodist/ByteBackpacker) for his update to Swift 3 and Xcode 8 
+
+
+## Versions
+
+(Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
+
+| Swift version | ByteBackpacker 1.0 | ByteBackpacker 1.1 and later |
+| :-: | :-: | :-: |
+| Swift 2.0 | ✓ | ✗ |
+| Swift 3.0 | ✗ | ✓ |
+
+Hopefully the APIs will be stable now.
 
 
 ## License 
