@@ -4,8 +4,8 @@
 [![CocoaPods](https://img.shields.io/cocoapods/p/ByteBackpacker.svg)]()
 [![CocoaPods](https://img.shields.io/cocoapods/v/ByteBackpacker.svg)]()
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
-<img src="https://raw.githubusercontent.com/michaeldorner/ByteBackpacker/master/icon.png" width="200" align="right">
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+<img src="https://raw.githubusercontent.com/michaeldorner/ByteBackpacker/master/icon.png" width="200" align="right">
 
 # ByteBackpacker
 
