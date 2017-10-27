@@ -16,15 +16,15 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ByteBackpacker"
-  s.version      = "1.1.2"
-  s.summary      = "ByteBackpacker is a small utility written in Swift to pack value types into a Byte array and unpack them back."
+  s.version      = "1.2"
+  s.summary      = "ByteBackpacker is a small utility written in pure Swift to pack value types into a Byte array and unpack them back."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "ByteBackpacker is a small utility written in Swift 3 to pack value types into a Byte array and unpack them back. Additionally, there is a Data (formerly NSData) extension to convert Data objects into a Byte array. Byte is a typealias for UInt8."
+  s.description  = "ByteBackpacker is a small utility written in pure Swift to pack value types into a Byte array and unpack them back. Additionally, there is a Data (formerly NSData) extension to convert Data objects into a Byte array. Byte is a typealias for UInt8."
 
   s.homepage     = "https://github.com/michaeldorner/ByteBackpacker"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -65,10 +65,10 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "10.0"
-  s.osx.deployment_target = "10.10"
+  s.ios.deployment_target = "11.0"
+  s.osx.deployment_target = "10.13"
   s.watchos.deployment_target = "2.0"
-  s.tvos.deployment_target = "10.0"
+  s.tvos.deployment_target = "11.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
