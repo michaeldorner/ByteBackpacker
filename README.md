@@ -109,8 +109,8 @@ or otherwise, if you want to use type inference
 | Swift version |  2.0 |  3.0 | 4.0 and later
 | :-: | :-: | :-: | :-: |
 | ByteBackpacker 1.0 | ✓ | ✗ | ✗
-| ByteBackpacker 1.1 to 3.0 | ✗ | ✓ | ✗
-| ByteBackpacker 3.1 and later | ✗ | ✓ | ✓
+| ByteBackpacker 1.1 | ✗ | ✓ | ✗
+| ByteBackpacker 1.2 and later | ✗ | ✓ | ✓
 
 Hopefully the APIs will be stable now.
 
