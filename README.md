@@ -102,18 +102,6 @@ or otherwise, if you want to use type inference
 
 ## Discussion
 
-
-### Versions
-(Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
-
-| Swift version |  2.0 |  3.0 | 4.0 and later
-| :-: | :-: | :-: | :-: |
-| ByteBackpacker 1.0 | ✓ | ✗ | ✗
-| ByteBackpacker 1.1 | ✗ | ✓ | ✗
-| ByteBackpacker 1.2 and later | ✗ | ✓ | ✓
-
-Hopefully the APIs will be stable now.
-
 ### Generics
 There is no way for specifying value types in Swift's generics (see [here the discussion on stackoverflow](http://stackoverflow.com/q/28782532/1864294)). It would be awesome to specify our methods like `func (un)pack<T: Any where T: ~AnyClass>(...)` to let the compiler check for value types. So far ByteBackpacker ensures the value type with `assert(...)`. 
 
@@ -137,6 +125,17 @@ Many thanks to
 * [iCodist](https://github.com/iCodist/ByteBackpacker) for his update to Swift 3 and Xcode 8 
 * [vaggos666](https://github.com/michaeldorner/ByteBackpacker/issues/4) for his remarks to Swift 4
 
+
+## Versions
+(Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
+
+| Swift version |  2.0 |  3.0 | 4.0 and later
+| :-: | :-: | :-: | :-: |
+| ByteBackpacker 1.0 | ✓ | ✗ | ✗
+| ByteBackpacker 1.1 | ✗ | ✓ | ✗
+| ByteBackpacker 1.2 and later | ✗ | ✓ | ✓
+
+Hopefully the APIs will be stable now.
 
 ## License 
 
