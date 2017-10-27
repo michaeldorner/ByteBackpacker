@@ -1,4 +1,4 @@
-![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)
+![Swift](http://img.shields.io/badge/swift-4.0-brightgreen.svg)
 [![Build Status](https://travis-ci.org/michaeldorner/ByteBackpacker.svg)](https://travis-ci.org/michaeldorner/ByteBackpacker) [![codecov](https://codecov.io/gh/michaeldorner/ByteBackpacker/branch/master/graph/badge.svg)](https://codecov.io/gh/michaeldorner/ByteBackpacker)
 [![codebeat badge](https://codebeat.co/badges/390a34ec-d7ba-4165-bb38-c338247ec04a)](https://codebeat.co/projects/github-com-michaeldorner-bytebackpacker)
 [![CocoaPods](https://img.shields.io/cocoapods/p/ByteBackpacker.svg)]()
@@ -9,7 +9,7 @@
 
 # ByteBackpacker
 
-> ByteBackpacker is a small utility written in Swift 3 to pack value types into a `Byte`¹ array and unpack them back. 
+> ByteBackpacker is a small utility written in pure Swift to pack value types into a `Byte`¹ array and unpack them back. 
 
 Additionally, there is a [`Data`](https://developer.apple.com/reference/foundation/data) (formerly `NSData`) [extension](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html) to convert `Data` objects into a `Byte` array. 
 
@@ -102,13 +102,15 @@ or otherwise, if you want to use type inference
 
 ## Discussion
 
+
 ### Versions
 (Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
 
-| Swift version | ByteBackpacker 1.0 | ByteBackpacker 1.1 and later |
-| :-: | :-: | :-: |
-| Swift 2.0 | ✓ | ✗ |
-| Swift 3.0 | ✗ | ✓ |
+| Swift version |  2.0 |  3.0 | 4.0 and later
+| :-: | :-: | :-: | :-: |
+| ByteBackpacker 1.0 | ✓ | ✗ | ✗
+| ByteBackpacker 1.1 to 3.0 | ✗ | ✓ | ✗
+| ByteBackpacker 3.1 and later | ✗ | ✓ | ✓
 
 Hopefully the APIs will be stable now.
 
@@ -133,18 +135,7 @@ I would love to improve this project. Tell me your ideas, here in github, via ma
 Many thanks to 
 * [Martin R](http://codereview.stackexchange.com/users/35991/martin-r) for [his suggestions in codereview.stackexchange.com](http://codereview.stackexchange.com/a/114738/61640) 
 * [iCodist](https://github.com/iCodist/ByteBackpacker) for his update to Swift 3 and Xcode 8 
-
-
-## Versions
-
-(Un)fortunately there is a lot of work going on Swift. This made larger changes to ByteBackpacker needed. The following table shows the compatibility.
-
-| Swift version | ByteBackpacker 1.0 | ByteBackpacker 1.1 and later |
-| :-: | :-: | :-: |
-| Swift 2.0 | ✓ | ✗ |
-| Swift 3.0 | ✗ | ✓ |
-
-Hopefully the APIs will be stable now.
+* [vaggos666](https://github.com/michaeldorner/ByteBackpacker/issues/4) for his remarks to Swift 4
 
 
 ## License 
