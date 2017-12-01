@@ -5,6 +5,8 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/ByteBackpacker.svg)]()
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/michaeldorner/bytebackpacker.svg)](http://isitmaintained.com/project/michaeldorner/bytebackpacker "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/michaeldorner/bytebackpacker.svg)](http://isitmaintained.com/project/michaeldorner/bytebackpacker "Percentage of issues still open")
 <img src="https://raw.githubusercontent.com/michaeldorner/ByteBackpacker/master/icon.png" width="200" align="right">
 
 # ByteBackpacker
