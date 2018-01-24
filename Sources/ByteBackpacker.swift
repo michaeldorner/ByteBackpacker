@@ -44,7 +44,7 @@ open class ByteBackpacker {
     /// - Returns: Value type of type `T`
     open class func unpack<T: Any>(_ valueByteArray: [Byte], toType type: T.Type, byteOrder: ByteOrder = .nativeByteOrder) -> T {
         assert(!(T.self is AnyClass), ByteBackpacker.referenceTypeErrorString)
-        let bytes = (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
+        let bytes = (byteOrder == ByteOrder.nativeByteOrder) ? valueByteArray : valueByteArray.reversed()
         return bytes.withUnsafeBufferPointer {
             return $0.baseAddress!.withMemoryRebound(to: T.self, capacity: 1) {
                 $0.pointee
@@ -65,7 +65,7 @@ open class ByteBackpacker {
         let valueByteArray = withUnsafePointer(to: &value) {
             Array(UnsafeBufferPointer(start: $0.withMemoryRebound(to: Byte.self, capacity: 1){$0}, count: MemoryLayout<T>.size))
         }
-        return (byteOrder == .littleEndian) ? valueByteArray : valueByteArray.reversed()
+        return (byteOrder == ByteOrder.nativeByteOrder) ? valueByteArray : valueByteArray.reversed()
     }
 }
 

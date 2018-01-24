@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ByteBackpacker"
-  s.version      = "1.2"
+  s.version      = "1.2.1"
   s.summary      = "ByteBackpacker is a small utility written in pure Swift to pack value types into a Byte array and unpack them back."
 
   # This description is used to generate tags and improve search results.
@@ -65,10 +65,10 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "11.0"
-  s.osx.deployment_target = "10.13"
+  s.ios.deployment_target = "9.0"
+  s.osx.deployment_target = "10.11"
   s.watchos.deployment_target = "2.0"
-  s.tvos.deployment_target = "11.0"
+  s.tvos.deployment_target = "10.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

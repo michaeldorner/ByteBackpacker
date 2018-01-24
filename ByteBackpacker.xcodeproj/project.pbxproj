@@ -44,7 +44,7 @@
 		5F2408C81E0BE731004AF90F /* ByteBackpackerReferenceTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ByteBackpackerReferenceTypeTests.swift; path = Tests/ByteBackpackerReferenceTypeTests.swift; sourceTree = "<group>"; };
 		5F2408C91E0BE731004AF90F /* ByteBackpackerValueTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ByteBackpackerValueTypeTests.swift; path = Tests/ByteBackpackerValueTypeTests.swift; sourceTree = "<group>"; };
 		5F2408CA1E0BE731004AF90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = "<group>"; };
-		5F58BA641D956E8600C3B403 /* ByteBackpackerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ByteBackpackerPlayground.playground; sourceTree = "<group>"; };
+		5F58BA641D956E8600C3B403 /* ByteBackpackerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ByteBackpackerPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5F8561D11C415CA700316A22 /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8561DB1C415CA700316A22 /* ByteBackpacker iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ByteBackpacker iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8561F51C415D2400316A22 /* ByteBackpacker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteBackpacker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,8 +396,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ByteBackpacker;
@@ -450,8 +450,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ByteBackpacker;
 				SDKROOT = iphoneos;
