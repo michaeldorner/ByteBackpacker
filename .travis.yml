@@ -7,7 +7,7 @@ osx_image: xcode11.2
 
 script:
 - xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X" build test 
-- xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "platform=iOS Simulator,name=iPhone 7" build test
+- xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "platform=iOS Simulator, OS=13.2, name=iPhone X" build test
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)  -J 'ByteBackpacker'
