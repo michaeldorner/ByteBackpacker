@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "ByteBackpacker"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "ByteBackpacker is a small utility written in pure Swift to pack value types into a Byte array and unpack them back."
   s.description  = <<-DESC
                   ByteBackpacker is a small utility written in pure Swift to pack value types into a Byte array and unpack them back. Additionally, there is a Data (formerly NSData) extension to convert Data objects into a Byte array. Byte is a typealias for UInt8.
@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
   s.author       = { "Michael Dorner" => "mail@michaeldorner.de" }
   s.source       = { :git => "https://github.com/michaeldorner/ByteBackpacker.git", :tag => s.version.to_s }
 
-  s.ios.deployment_target     = "9.0"
-  s.osx.deployment_target     = "10.11"
-  s.watchos.deployment_target = "2.0"
-  s.tvos.deployment_target    = "10.0"
+  s.ios.deployment_target     = "13.1"
+  s.osx.deployment_target     = "10.15"
+  s.watchos.deployment_target = "6.0"
+  s.tvos.deployment_target    = "13.1"
 
-  s.swift_version = '3.0'
+  s.swift_version = '5.0'
 
   s.requires_arc  = true
 
