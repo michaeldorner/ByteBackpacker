@@ -14,7 +14,14 @@ jobs:
         uses: actions/checkout@master
       - name: Build and test
         run: |
-          xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO build test
-          bash <(curl -s https://codecov.io/bash)
+          xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO clean build test
+          xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO clean build test
         env:
           destination: ${{ matrix.destination }}
+      - name: Upload coverage to Codecov  
+        uses: codecov/codecov-action@v1.0.3
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+          file: ./coverage.xml
+          flags: unittests
+          name: codecov-umbrella 
