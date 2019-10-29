@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: Build and test
         run: |
-          cd ByteBackpacker
           xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker iOS" -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO build test
           xcodebuild -project ByteBackpacker.xcodeproj -scheme "ByteBackpacker OS X" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO build test
           bash <(curl -s https://codecov.io/bash)
