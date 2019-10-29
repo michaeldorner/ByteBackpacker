@@ -1,4 +1,4 @@
-![Swift](http://img.shields.io/badge/swift-4.0-brightgreen.svg)
+![Swift](http://img.shields.io/badge/swift-5.0-brightgreen.svg)
 [![Build Status](https://travis-ci.org/michaeldorner/ByteBackpacker.svg)](https://travis-ci.org/michaeldorner/ByteBackpacker) 
 [![codecov](https://codecov.io/gh/michaeldorner/ByteBackpacker/branch/master/graph/badge.svg)](https://codecov.io/gh/michaeldorner/ByteBackpacker)
 [![codebeat badge](https://codebeat.co/badges/390a34ec-d7ba-4165-bb38-c338247ec04a)](https://codebeat.co/projects/github-com-michaeldorner-bytebackpacker)
