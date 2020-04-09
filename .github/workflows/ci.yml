@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - uses: fwal/setup-swift@master
+        with:
+          swift-version: "5.2.0"
+      - name: Get swift version
+        run: swift --version
       - name: Build and test
         run: xcodebuild test -scheme ByteBackpacker # swift test --enable-code-coverage is not yet supported
       - name: Upload coverage to Codecov  
