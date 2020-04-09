@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build and test
-        run: swift test
+        run: swift test --enable-code-coverage 
       - name: Upload coverage to Codecov  
         uses: codecov/codecov-action@v1.0.3
         with:
