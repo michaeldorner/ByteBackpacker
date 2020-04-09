@@ -10,11 +10,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build and test
-        run: swift test --enable-code-coverage 
+        run: |
+          swift test --enable-code-coverage 
+          swift test --show-codecov-path
+          llvm-cov report  -instr-profile=.build/debug/codecov/default.profdata -use-color
       - name: Upload coverage to Codecov  
         uses: codecov/codecov-action@v1.0.3
         with:
           token: ${{secrets.CODECOV_TOKEN}}
-          file: ./coverage.xml
-          flags: unittests
+          file: swift test --show-codecov-path
           name: codecov-umbrella 
