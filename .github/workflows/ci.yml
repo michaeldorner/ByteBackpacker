@@ -9,16 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - uses: fwal/setup-swift@master
-        with:
-          swift-version: "5.2.0"
       - name: Get swift version
         run: swift --version
       - name: Build and test
-        run: xcodebuild test -scheme ByteBackpacker # swift test --enable-code-coverage is not yet supported
-      - name: Upload coverage to Codecov  
-        run: |
-          swift --version
-          CODECOVPATH=$(swift test --show-codecov-path)
-          echo $CODECOVPATH
-          bash <(curl -s https://codecov.io/bash) -X xcodeplist -f $CODECOVPATH -t ${{ secrets.CODECOV_TOKEN }}
+        run: swift test --enable-code-coverage
+      - name: Upload coverage to Codecov (currently not working) 
+        run: bash <(curl -s https://codecov.io/bash) -X xcodeplist -f $(swift test --show-codecov-path) -t ${{ secrets.CODECOV_TOKEN }}
