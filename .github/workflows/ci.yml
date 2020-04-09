@@ -12,7 +12,4 @@ jobs:
       - name: Build and test
         run: xcodebuild test -scheme ByteBackpacker # swift test --enable-code-coverage is not yet supported
       - name: Upload coverage to Codecov  
-        uses: codecov/codecov-action@v1
-        with:
-          file: bash $(swift test --show-codecov-path)
-          fail_ci_if_error: True 
+        run: bash <(curl -s https://codecov.io/bash) -X xcodeplist -f $(swift test --show-codecov-path) -t ${{ secrets.CODECOV_TOKEN }}
