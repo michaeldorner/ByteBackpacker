@@ -14,5 +14,5 @@ jobs:
       - name: Upload coverage to Codecov  
         uses: codecov/codecov-action@v1
         with:
-          file: $(swift test --show-codecov-path)
+          file: bash $(swift test --show-codecov-path)
           fail_ci_if_error: True 
