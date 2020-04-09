@@ -10,10 +10,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build and test
-        run: swift test --enable-code-coverage 
+        run: xcodebuild test -scheme ByteBackpacker # swift test --enable-code-coverage is not yet supported
       - name: Upload coverage to Codecov  
-        uses: codecov/codecov-action@v1.0.3
+        uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}
-          file: swift test --show-codecov-path
-          name: codecov-umbrella 
+          fail_ci_if_error: True 
