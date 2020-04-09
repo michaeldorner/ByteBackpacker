@@ -10,10 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build and test
-        run: |
-          swift test --enable-code-coverage 
-          swift test --show-codecov-path
-          llvm-cov report  -instr-profile=.build/debug/codecov/default.profdata -use-color
+        run: swift test --enable-code-coverage 
       - name: Upload coverage to Codecov  
         uses: codecov/codecov-action@v1.0.3
         with:
