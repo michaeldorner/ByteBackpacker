@@ -82,5 +82,3 @@ public extension Data {
         return array
     }
 }
-
-

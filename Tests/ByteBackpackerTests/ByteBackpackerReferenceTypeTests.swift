@@ -15,4 +15,7 @@ class ByteBackpackerReferenceTypeTests: XCTestCase {
          XCTAssertThrowsError(ByteBackpacker.pack(c))
          */
     }
+    static var allTests = [
+        ("testReferenceType", testReferenceType),
+    ]
 }

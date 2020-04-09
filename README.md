@@ -34,8 +34,7 @@ Additionally, there is a [`Data`](https://developer.apple.com/reference/foundati
 
 You have three options:
 
-1. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/Sources/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your  project.
-2. Use [Swift Package Manager](https://swift.org/getting-started/#using-the-package-manager): 
+1. Use [Swift Package Manager](https://swift.org/getting-started/#using-the-package-manager): 
 
         import PackageDescription
 
@@ -46,7 +45,8 @@ You have three options:
             ]
         )
 
-3. Use [Cocoapods](https://cocoapods.org): `pod 'ByteBackpacker'`
+2. Use [Cocoapods](https://cocoapods.org): `pod 'ByteBackpacker'`
+3. Copy the [`ByteBackpacker.swift`](https://github.com/michaeldorner/ByteBackpacker/blob/master/Sources/ByteBackpacker.swift) file (containing the `ByteBackpacker` class) to your  project (not considered as good practice).
 
 Although it can be used in the same way in Objective-C, I had clearly Swift projects in mind. The easiest way for Objective-C users is to embed the `ByteBackpacker.framework`. Of course, Swift users can also do this, but actually I do not see any advantages.
 

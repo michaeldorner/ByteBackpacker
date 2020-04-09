@@ -128,4 +128,12 @@ class ByteBackpackerValueTypeTests: XCTestCase {
             XCTAssertEqual(ByteBackpacker.unpack(byteArrayFromNSData, toType: Double.self, byteOrder: byteOrder), value)
         }
     }
+    
+    static var allTests = [
+        ("testTypeInference", testTypeInference),
+        ("testRandomDouble", testRandomDouble),
+        ("testSelectedDouble", testSelectedDouble),
+        ("testNSData", testNSData),
+        ("testByteOrder", testByteOrder),
+    ]
 }
