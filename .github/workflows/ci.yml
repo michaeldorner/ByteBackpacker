@@ -14,4 +14,4 @@ jobs:
       - name: Build and test
         run: swift test --enable-code-coverage
       - name: Upload coverage to Codecov (currently not working) 
-        run: bash <(curl -s https://codecov.io/bash) -X xcodeplist -f $(swift test --show-codecov-path) -t ${{ secrets.CODECOV_TOKEN }}
+        run: bash <(curl -s https://codecov.io/bash)
