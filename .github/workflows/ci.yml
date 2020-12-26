@@ -13,5 +13,7 @@ jobs:
         run: swift --version
       - name: Build and test
         run: swift test --enable-code-coverage
+      - name: Convert codecov
+        run: xcrun llvm-cov export -format="lcov" .build/debug/*PackageTests.xctest/Contents/MacOS/*PackageTests -instr-profile .build/debug/codecov/default.profdata > coverage.lcov
       - name: Upload coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash) -X xcodellvm
+        run: bash <(curl -s https://codecov.io/bash)
