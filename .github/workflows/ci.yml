@@ -5,7 +5,7 @@ on: [push]
 jobs:
   test:
     runs-on: macOS-latest
-    name: Test
+    name: CI
     steps:
       - name: Checkout
         uses: actions/checkout@master
@@ -13,5 +13,5 @@ jobs:
         run: swift --version
       - name: Build and test
         run: swift test --enable-code-coverage
-      - name: Upload coverage to Codecov (currently not working) 
-        run: bash <(curl -s https://codecov.io/bash)
+      - name: Upload coverage to Codecov
+        run: bash <(curl -s https://codecov.io/bash) -X xcodellvm
